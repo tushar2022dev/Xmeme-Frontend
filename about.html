@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <script src ="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="input.css">
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.png">
+</head>
+<body >
+    <img src="./Resources/adi.png" class="fixed top-0 left-0 h-96 w-96"> 
+    <div class= "w-1/2 h-full fixed -z-20 mr-5 justify-end ml-[50rem]" >
+        <img src = "./Resources/xback.png" class="ml-40 mt-20">
+       </div>
+    
+    <div class="h-full fixed w-full   -z-10 "></div> 
+    <div class="fixed w-full">
+        <nav class=" flex  bg-gradient-to-l from-pink-400 to-purple-400 shadow-md backdrop-blur-3xl opacity-98">
+            <h2 class="m-2 ml-6 font-extrabold font-sans text-xl "><a href="./index.html">XMeme.</a></h2>
+    
+            <ul class="flex justify-end space-x-4 mr-4 mt-3 w-full" >
+
+                 <li class="hover:text-purple-800"><a href="./about.html"> About </a></li>
+                 <li><button class=" bg-purple-200 h-6 w-24 rounded-lg text-gray-800 font-semibold hover:bg-purple-300  hover:shadow-lg hover:animate-none shadow-md "><a href="./login.html">Login</a></button></li>
+            </ul>
+    
+        </nav>
+    </div>
+    <div class=" w-2/3 left-[20%] fixed mt-10">
+ 
+
+
+     <form  class=" mt-2 outline outline-2 outline-pink-300 shadow-lg p-1 rounded-xl bg-opacity-40 bg-pink-500" autocomplete="off">
+        <p class="ml-2 text-lg text-pink-100">name*</p>
+        <input type="text" name="name" class="w-full rounded-md h-12 bg-transparent outline outline-2 outline-pink-200  text-pink-100 pl-4 text-lg" required autocomplete="off"> <br>
+        
+        <p class="ml-2 text-lg text-pink-100">email*</p>
+        <input type="email" name = "email" class="w-full rounded-md h-12 bg-transparent outline outline-2 outline-pink-200  text-pink-100 pl-4 text-2xl" required> <br>
+        
+        <p class="ml-2 text-lg text-pink-100">message*</p>
+        <textarea rows="12" class="resize-none w-full rounded-md bg-transparent outline outline-2 outline-pink-200 text-pink-100 p-4 text-xl"></textarea>
+        <input type="submit" class="h-16 w-[100%] bg-pink-400 rounded-lg shadow-2xl text-pink-100 hover:bg-pink-500"  value="Send">
+
+     </form>
+
+
+    </div>
+
+   
+</body>
+</html>

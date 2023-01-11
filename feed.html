@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+    
+    <link rel="stylesheet" href="input.css">
+    
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.png">
+</head>
+<body onload="onPageLoad()">
+    <img src="./Resources/adi.png" class="fixed top-0 left-0 h-96 w-96"> 
+    <img src="./Resources/3xback.png" class="fixed bottom-0 left-44 h-96 w-96 -z-30">
+    <div class="fixed w-full">
+    <nav class=" flex  bg-gradient-to-r from-purple-400 to-pink-300 shadow-md backdrop-blur-3xl opacity-98">
+        <h2 class="m-3 ml-6 font-extrabold font-sans text-2xl "><a href="./index.html">XMeme.</a></h2>
+
+        <ul class="flex justify-end space-x-4 mr-4 mt-5 w-full" >
+             <li class="hover:text-purple-800"><a href="./contact.html">Contact</a></li>
+             
+             <li><button class=" bg-purple-300 h-6 w-24 rounded-lg text-gray-800 font-semibold  hover:shadow-lg hover:animate-none shadow-md "><a href="./login.html">Logout</a></button></li>
+        </ul>
+
+    </nav>
+</div>
+
+<div class=" flex z-10 fixed h-full w-full justify-start ml-10 mt-32 items-center hover:z-30">
+    <div class=""> 
+     <form class=" h-96 w-96 rounded-xl shadow-md outline-double outline-1 bg-white outline-slate-200  " id="shareForm" enctype="multipart/form-data"> 
+         <h2 class="text-gray-600 pt-3 font-semibold text-xl ml-28" id="share_heading"> Share a meme! </h2>
+         <p class="mx-6 my-3 mt-6">Image</p>
+         <input type="file" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="image" required>
+        <br>
+        <p class="mx-6 my-3">Caption</p>
+        <textarea class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3 resize-none" rows="5" cols="50" name="caption" required ></textarea>
+        <button type="submit" class="ml-28 mt-6 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-800 font-semibold  hover:shadow-lg hover:animate-none active:bg-emerald-300 animate-pulse ">Share</button>
+        
+     </form>
+    </div>
+
+</div>
+
+<p id="demo"></p>
+
+<div class= "w-1/2 h-full fixed  mr-5 justify-end ml-[52rem] -z-10" >
+    <img src = "./Resources/xback.png" class="ml-40 mt-20">
+   </div>
+
+    <div  class=" w-[40rem] h-auto ml-[30%]  py-5 " id = "meme_space">
+        
+       <h1 class="p-5 mt-44 ml-44 text-xl text-slate-700 animate-bounce "> Loading memes for you ... </h1>
+
+
+        
+           
+
+    </div>
+
+    <script src ="./feed.js"></script>
+</body>
+</html>

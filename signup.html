@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    
+    <link rel="stylesheet" href="input.css">
+    <link rel="icon" type="image/x-icon" href="/Resources/favicon.png">
+</head>
+<body>
+    <img src="./Resources/adi.png" class="fixed top-0 left-0 h-96 w-96"> 
+    <p class=" fixed font-extrabold mx-20 mt-20 text-7xl underline decoration-purple-400">XMeme.</p>
+   <nav class="z-20  fixed  w-full" >
+        
+        <ul class="flex justify-end space-x-6 mr-5 my-5 text-slate-700">
+            <li><a href="./login.html" class=" hover:text-purple-500">Login</a></li>
+           
+            <li><a href="./contact.html" class=" hover:text-purple-500">Contact</a></li>
+        </ul>
+       
+
+   </nav>
+
+   <div class= "w-1/2 h-full fixed -z-20 mr-5 justify-end ml-[50rem]" >
+    <img src = "./Resources/xback.png" class="ml-40 mt-20">
+   </div>
+
+
+    <div class=" flex fixed h-full w-full z-10 justify-center items-center">
+        <div class=""> 
+         <form class=" h-[35rem] w-[26rem] rounded-xl shadow-2xl" action=""  id="signup-form"> 
+             <h2 class="text-slate-700 pt-6 font-bold text-3xl ml-32"> Join Now! </h2>
+             <p class="mx-6 my-3 text-slate-500 mt-12">Username *</p>
+             <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="username" required>
+             <br>
+            <p class="mx-6 my-3 text-slate-500">Your Name *</p>
+            <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="name" required>
+            <br>
+            <p class="mx-6 my-3 text-slate-500">Email Address *</p>
+            <input type="email" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="email" required>
+            <br>
+            <p class="mx-6 my-3 text-slate-500">Set Password *</p>
+            <input type="password" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="password" required>
+            <input type="submit" value="Register" class="cursor-pointer ml-28 mt-16 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-900 font-semibold active:outline-purple-400 active:outline-4 active:outline active:outline-offset-2 hover:shadow-none shadow-md"  >
+            
+         </form>
+
+        </div>
+
+    </div>
+    <footer class="bg-gradient-to-r from-purple-400 to-pink-400 bottom-0 fixed w-full text-center h-11 z-50">
+        <a href="https://tushargupta.netlify.app" target="_blank"><p class="m-3 text-white ">Built by tushargupta</p></a>
+    </footer>
+
+   <script>
+
+
+        const signform = document.forms['signup-form']
+        signform.addEventListener('submit',(e)=>{
+
+        e.preventDefault();
+        const username1 = signform.querySelector('input[name="username"]').value
+        const name1 = signform.querySelector('input[name="name"]').value
+        const email1 = signform.querySelector('input[name="email"]').value
+        const password1 = signform.querySelector('input[name="password"]').value
+        
+
+
+        data = {
+            username:username1,
+            name:name1,
+            email:email1,
+            password:password1
+        }
+
+          params = {
+             method:'post',
+             headers:{
+                'Content-Type':'application/json'
+             },
+             body: JSON.stringify(data)
+          }
+        
+          url = 'https://xmeme-i4d8.onrender.com/signup'
+          fetch(url,params).then((response)=>{
+            return response.json()
+          }).then((data)=>{
+                 
+               if(data.status){
+                signform.querySelector('input[type="submit"]').value='Registered!'
+                window.location='./login.html'
+               }
+               else{
+                alert('Username already taken!')
+               }
+
+          })
+        
+        })
+
+
+
+   </script>
+
+
+
+</body>
+</html>
