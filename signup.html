@@ -6,13 +6,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Signup</title>
     
-    <link rel="stylesheet" href="input.css">
+    <link rel="stylesheet" href="/input.css">
     <link rel="icon" type="image/x-icon" href="/Resources/favicon.png">
 </head>
 <body>
-    <img src="./Resources/adi.png" class="fixed top-0 left-0 h-96 w-96"> 
-    <p class=" fixed font-extrabold mx-20 mt-20 text-7xl underline decoration-purple-400">XMeme.</p>
-   <nav class="z-20  fixed  w-full" >
+
+    <img src="./Resources/adi.png" class="fixed -z-20 top-0 left-0 h-96 w-96"> 
+    <p class="fixed  font-extrabold left-5 mt-5 z-50 text-xl underline decoration-purple-400  md:hidden">XMeme.</p>
+    <p class=" fixed hidden font-extrabold mx-10 mt-10 text-5xl underline decoration-purple-400 md:block">XMeme.</p>
+    
+   <nav class="z-20  max-[460px]:bg-white  max-[460px]:shadow-md fixed  w-full" >
         
         <ul class="flex justify-end space-x-6 mr-5 my-5 text-slate-700">
             <li><a href="./login.html" class=" hover:text-purple-500">Login</a></li>
@@ -28,33 +31,34 @@
    </div>
 
 
-    <div class=" flex fixed h-full w-full z-10 justify-center items-center">
-        <div class=""> 
-         <form class=" h-[35rem] w-[26rem] rounded-xl shadow-2xl" action=""  id="signup-form"> 
-             <h2 class="text-slate-700 pt-6 font-bold text-3xl ml-32"> Join Now! </h2>
+    <div class=" flex  h-full w-full z-10 justify-center items-center">
+        <div class="mt-24 mb-14"> 
+         <form class=" h-[35rem] w-[26rem] rounded-xl shadow-2xl bg-white bg-opacity-90 max-[460px]:w-[290px]" action=""  id="signup-form"> 
+             <h2 class="text-slate-700 pt-6 font-bold text-3xl ml-32 max-[460px]:ml-20 max-[460px]:text-lg"> Join Now! </h2>
              <p class="mx-6 my-3 text-slate-500 mt-12">Username *</p>
-             <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="username" required>
+             <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3 max-[460px]:w-max" name="username" required>
              <br>
             <p class="mx-6 my-3 text-slate-500">Your Name *</p>
-            <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="name" required>
+            <input type="text" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3 max-[460px]:w-max" name="name" required>
             <br>
-            <p class="mx-6 my-3 text-slate-500">Email Address *</p>
-            <input type="email" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="email" required>
+            <p class="mx-6 my-3 text-slate-500 ">Email Address *</p>
+            <input type="email" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3 max-[460px]:w-max  " name="email" required>
             <br>
             <p class="mx-6 my-3 text-slate-500">Set Password *</p>
-            <input type="password" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3" name="password" required>
-            <input type="submit" value="Register" class="cursor-pointer ml-28 mt-16 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-900 font-semibold active:outline-purple-400 active:outline-4 active:outline active:outline-offset-2 hover:shadow-none shadow-md"  >
+            <input type="password" class=" border-2 border-gray-200 rounded-lg mx-4  w-[22rem] px-3 max-[460px]:w-max" name="password" required>
+            <input type="submit" value="Register" class="cursor-pointer ml-28 max-[460px]:ml-10 mt-16 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-900 font-semibold active:outline-purple-400 active:outline-4 active:outline active:outline-offset-2 hover:shadow-none shadow-md"  >
             
          </form>
-
+    
         </div>
-
+    
     </div>
-    <footer class="bg-gradient-to-r from-purple-400 to-pink-400 bottom-0 fixed w-full text-center h-11 z-50">
-        <a href="https://tushargupta.netlify.app" target="_blank"><p class="m-3 text-white ">Built by tushargupta</p></a>
+    
+    <footer class="bg-gradient-to-r from-purple-400 to-pink-400 bottom-0 fixed w-full text-center max-[460px]:h-6 max-[460px]:text-sm h-11 z-50">
+        <a href="https://tushargupta.netlify.app" target="_blank"><p class="m-3 max-[460px]:m-0 text-white ">Built by tushargupta</p></a>
     </footer>
-
-   <script>
+    
+    <script>
 
 
         const signform = document.forms['signup-form']

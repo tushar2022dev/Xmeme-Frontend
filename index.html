@@ -6,32 +6,33 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xmeme</title>
     <link rel="icon" type="image/x-icon" href="/Resources/favicon.png">
-    <link rel="stylesheet" href="input.css">
+   
+    <link rel="stylesheet" href="/input.css">
 </head>
 <body>
-    <h1 class="bottom-11 right-10 z-40 text-5xl text-pink-300 italic font-outline  font-extrabold  fixed"> SHARE MEMES NOW !!</h1>
+    <h1 class="bottom-11 right-10  -z-40 text-5xl text-pink-300 italic font-outline max-[600px]:text-lg font-extrabold  fixed"> SHARE MEMES NOW !!</h1>
 
-    <nav class=" w-full z-10  fixed">
+    <nav class=" w-full z-10  ">
         <ul class=" text-black flex space-x-5 justify-end px-11 my-3 ">
             
             <li> <a href="./contact.html" class=" hover:text-purple-500">Contact Us</a>  </li>
         </ul>
     </nav>
 
-    <img src="./Resources/adi.png" class="fixed top-0 left-0 h-96 w-96"> 
+    <img src="./Resources/adi.png" class="fixed top-0 -z-30 left-0 h-96 w-96"> 
    
 
-    <div class="flex h-full w-full background fixed ">
-       <div class="w-1/2">  
-             <div class="ml-20 mt-36 text-8xl font-extrabold">XMeme.</div> 
-             <div class="mt-8 ml-28 text-3xl font-semibold text-gray-700 "> A meme sharing web application!
+    <div class="flex h-full w-full background  mb-24 ">
+       <div class="w-1/2 max-[840px]:w-max">  
+             <div class="ml-20 mt-36 text-8xl font-extrabold max-[390px]:text-5xl">XMeme.</div> 
+             <div class="mt-8 ml-28 text-3xl font-semibold text-gray-700 max-[390px]:ml-10 "> A meme sharing web application!
              </div>
-              <button  class="ml-44 mt-32 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-800 font-semibold  hover:animate-none active:outline active:outline-4 active:outline-offset-2 active:outline-indigo-500  shadow-md" onclick='window.location.href = "./login.html"'>Login</button>
-              <button  class="ml-20 mt-32 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-800 font-semibold  hover:animate-none active:outline active:outline-4 active:outline-offset-2 active:outline-indigo-500 shadow-md animate-bounce" onclick='window.location.href = "./signup.html"'>Signup</button>
+              <button  class="max-[1120px]:ml-10 max-[390px]:ml-2 ml-44 mt-32 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-800 font-semibold  hover:animate-none active:outline active:outline-4 active:outline-offset-2 active:outline-indigo-500  shadow-md" onclick='window.location.href = "./login.html"'>Login</button>
+              <button  class="max-[840px]:ml-3 ml-20 mt-32 bg-gradient-to-r from-purple-400 to-pink-400 h-10 w-36 rounded-lg text-gray-800 font-semibold  hover:animate-none active:outline active:outline-4 active:outline-offset-2 active:outline-indigo-500 shadow-md animate-bounce" onclick='window.location.href = "./signup.html"'>Signup</button>
        </div>
            
-        <div class= "w-1/2 h-full l-0 " >
-          <img src = "./Resources/meme.png" class="ml-40 mt-20 ">
+        <div class= "w-1/2 h-full l-0 -z-20 max-[840px]:hidden" >
+          <img src = "./Resources/meme.png" class="ml-40 mt-20 -z-10">
         </div>
     </div>
 
