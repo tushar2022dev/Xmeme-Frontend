@@ -5,4 +5,4 @@ This is frontend for the Xmeme meme sharing application.
  
  The backend / web service is built using Node.js,Express.js, MongoDB ( https://github.com/tushar2022dev/Xmeme-Backend )
  
- Hosted ( https://xmeme1.netlify.app )
+ Hosted/ Visit Xmeme ->( https://xmeme1.netlify.app )
